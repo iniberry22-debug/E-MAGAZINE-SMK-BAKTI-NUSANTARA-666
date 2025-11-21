@@ -1,0 +1,49 @@
+/* Custom Slider Navigation Buttons */
+.blog-hero-slider .swiper-button-next,
+.blog-hero-slider .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-hero-slider .swiper-button-next:hover,
+.blog-hero-slider .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.blog-hero-slider .swiper-button-next::after,
+.blog-hero-slider .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.blog-hero-slider .swiper-button-next {
+  right: 20px;
+}
+
+.blog-hero-slider .swiper-button-prev {
+  left: 20px;
+}
+
+/* Ensure buttons are visible on mobile */
+@media (max-width: 768px) {
+  .blog-hero-slider .swiper-button-next,
+  .blog-hero-slider .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+  }
+  
+  .blog-hero-slider .swiper-button-next::after,
+  .blog-hero-slider .swiper-button-prev::after {
+    font-size: 14px;
+  }
+}

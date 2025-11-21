@@ -1,0 +1,22 @@
+.blog-hero-content {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.blog-hero-item {
+  position: relative !important;
+}
+
+.blog-hero-item img {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.swiper-slide {
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+}
