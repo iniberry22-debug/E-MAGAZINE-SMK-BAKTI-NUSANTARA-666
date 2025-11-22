@@ -1,14 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.siswa')
 
-@section('title', 'Buat Poster - E-Magazine')
+@section('title', 'Buat Poster')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h4><i class="bi bi-image me-2"></i>Buat Poster Sekolah</h4>
+                    <h4><i class="fas fa-image me-2"></i>Buat Poster Sekolah</h4>
                 </div>
                 <div class="card-body">
                     @if($errors->any())
@@ -46,11 +46,11 @@
                         </div>
 
                         <div class="d-flex justify-content-between">
-                            <a href="{{ route('home') }}" class="btn btn-secondary">
-                                <i class="bi bi-arrow-left me-1"></i>Kembali
+                            <a href="{{ route('siswa.dashboard') }}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>Kembali
                             </a>
                             <button type="submit" class="btn btn-success">
-                                <i class="bi bi-check me-1"></i>Buat Poster
+                                <i class="fas fa-check me-1"></i>Buat Poster
                             </button>
                         </div>
                     </form>
