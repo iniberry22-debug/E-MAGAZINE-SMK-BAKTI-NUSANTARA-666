@@ -1,0 +1,27 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('poster_sekolah', function (Blueprint $table) {
+            $table->id();
+            $table->string('judul');
+            $table->string('foto');
+            $table->unsignedBigInteger('id_user')->nullable();
+            $table->enum('status', ['pending', 'published'])->default('pending');
+            $table->timestamps();
+
+            $table->foreign('id_user')->references('id_user')->on('user')->onDelete('set null');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('poster_sekolah');
+    }
+};
